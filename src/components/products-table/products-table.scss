@@ -1,0 +1,35 @@
+.wrapper {
+  max-width: 65%;
+  margin: 0 auto;
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    overflow: auto;
+    white-space: nowrap;
+
+    thead {
+      text-align: left;
+      tr {
+        th {
+          padding: 2rem 0.5rem;
+
+          &:first-child {
+            font-size: 2em;
+
+            @media screen and (max-width: 650px) {
+              font-size: 1em;
+            }
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 650px) {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 950px) {
+    max-width: 100%;
+  }
+}
