@@ -39,32 +39,22 @@ h6 {
   border-radius: 10px;
   outline: none;
   border: none;
-}
 
-.btn:active {
-  outline: none;
-  border: none;
-}
-
-.btn:focus {
-  outline: 0;
-}
-
-a {
-  text-decoration: none;
-  -webkit-tap-highlight-color: transparent;
-  outline: none;
-}
-
-a:link:focus,
-a:visited:focus {
-  outline: none;
-  -moz-outline: none;
-}
-
-button:disabled,
-button[disabled] {
-  cursor: no-drop;
-  opacity: 0.5;
+  &:active {
+    outline: none;
+    border: none;
+  }
+  &:focus {
+    outline: 0;
+  }
+  &:hover {
+    opacity: 0.8;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  &:disabled {
+    cursor: no-drop;
+    opacity: 0.5;
+  }
 }
 

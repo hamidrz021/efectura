@@ -21,6 +21,8 @@ const Product = ({ data }) => {
       <td>
         <img width="80px" src={data.thumbnail} alt="product thumbnail" />
         {data.name}
+        <br />
+        {data.author}
       </td>
       <td>{data.format}</td>
       <td>

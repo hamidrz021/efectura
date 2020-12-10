@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 import useCard from "../../hooks/useCard";
 import "./card.scss";
 
 const Card = () => {
   const [state, setState] = useState({ subTotal: 0, shipping: 0, total: 0 });
   const cardData = useCard();
+
+  const handleSubmit = () => {
+    toast.success("You are now connected to the payment gateway")
+  }
 
   useEffect(() => {
     let subTotal = 0;
@@ -34,7 +39,7 @@ const Card = () => {
         <span>Total(tax included):</span>
         <span>{state.total}</span>
       </p>
-      <button className="btn">
+      <button className="btn" onClick={handleSubmit} disabled={!state.total}>
         <span>checkout</span>
         <span>{state.total}</span>
       </button>
